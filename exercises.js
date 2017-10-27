@@ -26,8 +26,8 @@ console.log(testGreeting); // printing the output value of the function.
  *
  * These two variables will be used to invoke the functions #2 - #5.
 */ 
-var bango1 = 10;
-var bango2 = 28;
+var bango1 = 17;
+var bango2 = 38;
 
 /*
  * #2
@@ -187,9 +187,9 @@ console.log(checkQuotient())
  * This function will add the first two parameters together. Then with the sum of that operation, subtract it from the third parameter. PLEASE USE YOUR PREVIOUS FUNCTIONS FOR THIS EXERCISE. 
  * Console.log your result.
 */ 
-var bango3 = 3;
-var bango4 = 2;
-var bango5 = 9;
+var bango3 = null;
+var bango4 = null;
+var bango5 = null;
 
 function addThenSubtract(num1,num2,num3){
   return num1+num2;
@@ -282,7 +282,10 @@ console.log(eatFood("Richard"," Ribucan-Perales", " ramen"))
  * Example input: "believe you can and you're halfway there."
  * Example output: "BELIEVE YOU CAN AND YOU'RE HALFWAY THERE."
 */
- 
+ function allCaps(str){
+  return str.toUpperCase();
+ }
+console.log(allCaps('oh you coulda found this on w3schooools, whoaaaaaaaa'))
 
 
 /*
@@ -292,8 +295,10 @@ console.log(eatFood("Richard"," Ribucan-Perales", " ramen"))
  * This function will capitalize only the first letter in the variable phase above. 
  * Console.log your result.
 */
-
-
+function oneCap(str){
+  return str.charAt(0).toUpperCase() + str.slice(1) 
+}
+console.log(oneCap('my boy callizo helped me out with this'))
 
 /*
  * #17
@@ -306,13 +311,34 @@ console.log(eatFood("Richard"," Ribucan-Perales", " ramen"))
  * Store the return value to a variable named `canDrink`. Console.log your result.
  */
 
+function verifyDrinkingAge(age){
+  if (age >= 21) {
+    return true;
+  }
+    else if (age < 21) {
+    return false;
+  }
+}
 
-
+var canDrink = verifyDrinkingAge(2);
+console.log(canDrink);
 /**
  * #18
  * Function - throwParty
  * Create a function named throwParty. This function will check the value stored in the `canDrink` variable in the previous exercise. If the value is true, it will return the message "Cheee Hoo! We going to da party!" If false, then it will return the message "Meh, see you at Starbucks." Store the return value to a variable named `canParty`. Console.log your result.
  */
+
+
+function throwParty(){
+  if (canDrink == true){
+    return "CHEEHOO YOU GON PARTY!";
+  }
+  else if (canDrink == false){
+    return "see you at starbucks kid";
+  }
+}
+var canParty = throwParty(canDrink)
+console.log(canParty)
 
 
 
